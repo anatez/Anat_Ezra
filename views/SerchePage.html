@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search page</title>
+    <link rel="stylesheet" href="../static/design.css">
+    <script src="../static/JS.js" defer></script>
+</head>
+<body>
+    <div class="grid_container">
+        <div class= "nav"> <nav> 
+            <ul class="nav-list">
+                <li style="display:inline;" class="list-item">
+                    <a href="loginPage.html">LogOut</a>
+                </li>
+                <li style="display:inline;" class="list-item">
+                    <a href="FavoritesPage.html">My Favorites</a>
+                </li>
+
+            </ul>
+            </nav>
+        </div>
+
+        <div class="HEADER">
+            <h1 class= "header3"> Search your BabySitter</h1><br>
+            <h2 class="header2"> Enter your search details </h2>
+            
+        </div>
+
+        <div class="MAIN">
+
+            <form class= "search_form" action="" method="">
+                <br><br>
+
+                <label  for="city" >City:</label>
+                <select name="city" class= "city" id="city" >
+                        <option value="">Select your city</option>
+                        <option value="Tel Aviv">Tel Aviv</option>
+                        <option value="Beer Sheva">Beer Sheva</option>
+                        <option value="Ramat Gan">Ramat Gan</option>
+                        <option value="Eilat">Eilat</option>
+                        <option value="Shoam">Shoam</option>
+                        <option value="Hod Hahsharon">Hod Hahsharon</option>
+                    </select><br> <br><br>
+
+
+                <lablel> Get my location</lablel>
+                <input  id="location" type="checkbox" onclick="GetLocation(); enableCreateUser()">
+                <p id="p"></p> <br>
+                
+                <label id="recmmended" for="recmmended" >Recmmended?</label>
+                <input type="checkbox"  id="checkbox"  name="recmmended" ><br><br><br>
+
+
+                <label id="experienceYears" for="experienceyears" >Experience Years:</label>
+                <select name="experience years" id="years" required >
+                        <option value="">Select years of experience</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select><br> <br><br>
+
+                    <label id="pricePerHour" for="priceperhour" >Price Per Hour:</label>
+                    <select name="price per hour"  id="price" required >
+                        <option value="">Select your maximum price per hour</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="40">40</option>
+                        <option value="50">50</option>
+                        <option value="60">60</option>
+                        <option value="70">70</option>
+                        <option value="80">80</option>
+                        <option value="90">90</option>
+                    </select><br>
+
+            
+            <button class="form_button" type="submit">Find a match</button><br>
+        </form>
+    
+
+        </div>
+    </div>
+</body>
+</html>
+
