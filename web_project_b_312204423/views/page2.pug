@@ -1,0 +1,43 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title sign up page
+  link(rel='stylesheet' href='../static/design.css')
+  script(src='../static/JS.js' defer='')
+.grid_container
+  .nav
+    nav
+      ul.nav-list
+        li.list-item(style='display:inline;')
+          a(href='loginPage.html') Home
+        li.list-item(style='display:inline;')
+          a(href='SignUp.html') SignUp
+  .HEADER
+    h2.header2  Register with username and password 
+    br
+    div
+      .MAIN
+        form.signUp_form(action='' method='' onsubmit='return validateForm()')
+          label(for='FullName') User name
+          br
+          input#FullName(type='text' required='' name='FullName')
+          br
+          label(for='email') Email
+          br
+          input#email(type='email' required='' name='email' pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$')
+          br
+          label(for='password') Password
+          br
+          input#password1(type='password' required='' name='password' minlength='8')
+          br
+          label(for='check password') Check password
+          br
+          input#password2(type='password' required='' name='check password' minlength='8')
+          br
+          span#message2  
+          br
+          br
+          button.form_button(type='Submit') SIGN UP
+          br

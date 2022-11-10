@@ -1,0 +1,73 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title search page
+  link(rel='stylesheet' href='../static/design.css')
+  script(src='../static/JS.js' defer='')
+.grid_container
+  .nav
+    nav
+      ul.nav-list
+        li.list-item(style='display:inline;')
+          a(href='loginPage.html') LogOut
+        li.list-item(style='display:inline;')
+          a(href='FavoritesPage.html') My Favorites
+  .HEADER
+    h1.header3  Search your BabySitter
+    br
+    h2.header2  Enter your search details 
+  .MAIN
+    form.search_form(action='' method='')
+      br
+      br
+      label(for='city') City:
+      select#city.city(name='city')
+        option(value='') Select your city
+        option(value='Tel Aviv') Tel Aviv
+        option(value='Beer Sheva') Beer Sheva
+        option(value='Ramat Gan') Ramat Gan
+        option(value='Eilat') Eilat
+        option(value='Shoam') Shoam
+        option(value='Hod Hahsharon') Hod Hahsharon
+      br
+      br
+      br
+      lablel  Get my location
+      input#location(type='checkbox' onclick='GetLocation(); enableCreateUser()')
+      p#p
+      br
+      label#recmmended(for='recmmended') Recmmended?
+      input#checkbox(type='checkbox' name='recmmended')
+      br
+      br
+      br
+      label#experienceYears(for='experienceyears') Experience Years:
+      select#years(name='experience years' required='')
+        option(value='') Select years of experience
+        option(value='1') 1
+        option(value='2') 2
+        option(value='3') 3
+        option(value='4') 4
+        option(value='5') 5
+        option(value='6') 6
+        option(value='7') 7
+        option(value='8') 8
+      br
+      br
+      br
+      label#pricePerHour(for='priceperhour') Price Per Hour:
+      select#price(name='price per hour' required='')
+        option(value='') Select your maximum price per hour
+        option(value='20') 20
+        option(value='30') 30
+        option(value='40') 40
+        option(value='50') 50
+        option(value='60') 60
+        option(value='70') 70
+        option(value='80') 80
+        option(value='90') 90
+      br
+      button.form_button(type='submit') Find a match
+      br

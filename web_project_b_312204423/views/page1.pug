@@ -1,0 +1,37 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title login page
+  link(rel='stylesheet' href='style.css')
+  script(src='../static/JS.js' defer='')
+#login_page
+  .grid_container
+    .nav
+      nav
+        ul.nav-list
+          li.list-item(style='display:inline;')
+            a(href='loginPage.html') Home
+          li.list-item(style='display:inline;')
+            a(href='SignUp.html') SignUp
+    .HEADER
+      h1#main_header  BabySetting 
+    .MAIN
+      img.logo(src='../static/logo.png' alt='')
+      form.signIn_form(action='' method='' onsubmit='return verifyFields()')
+        label(for='FullName') User name
+        br
+        input#FullName(type='text' name='FullName')
+        br
+        label(for='email') Email
+        br
+        input#email(type='email' name='email' pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$')
+        br
+        label(for='password') password
+        br
+        input#pswd(type='password' name='password' value='')
+        br
+        span#message  
+        br
+        button.form_button(type='submit') Login

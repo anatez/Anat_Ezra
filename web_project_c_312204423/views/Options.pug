@@ -1,0 +1,43 @@
+doctype html
+html
+    head
+        script(src='JS.js' defer='')
+        link(rel="stylesheet", href="style.css")
+        title
+    body
+        .grid_container
+            .options_container
+                .nav
+                    nav
+                        ul.nav-list
+                            li.list-item(style='display:inline;')
+                                a(href='/loginPage') LogOut
+                            li.list-item(style='display:inline;')
+                                a(href='/serchePage') search
+                .HEADER
+                    h1.header3  We found babysitter for you 
+                .MAIN     
+                    table
+                        each n in pple
+                            .profile
+                                        
+                                        br
+                                        img.profilePic(src= n.img alt='')
+                                        p.profile_header Personal Info:
+                                        p Name:
+                                        span#m #{n.name}
+                                        p Email:
+                                        span#m #{n.email}
+                                        p Rate: 
+                                        span#m #{n.stars} stars
+                                        p City:
+                                        span#m #{n.city}
+                                        p Age:
+                                        span#m #{n.age}
+                                        p Price:
+                                        span#m #{n.price}
+                                        p Phone number:
+                                        span#m #{n.phone}
+                                        p Expirience:
+                                        span#m #{n.experience} years
+                                        br

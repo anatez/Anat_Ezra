@@ -1,0 +1,38 @@
+doctype html
+html
+    head
+        script(src='JS.js' defer='')
+        link(rel="stylesheet", href="style.css")
+        title
+    body
+        .grid_container
+            .nav
+                nav
+                    ul.nav-list
+                        li.list-item(style='display:inline;')
+                            a(href='/loginPage') Home
+                        li.list-item(style='display:inline;')
+                            a(href='/SignUp') SignUp
+                .HEADER
+                    h2.header2 Register with username and password 
+                br
+                div
+                .MAIN
+                    form.signUp_form(action="/createNewUser" method="POST" onsubmit='return validateForm()')
+                        label(for='name') User name
+                        br
+                        input#FullName(type='text' required='' name='name')
+                        br
+                        label(for='email') Email
+                        br
+                        input#email(type='email' required='' name='email' pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$')
+                        br
+                        label(for='password') Password
+                        br
+                        input#password1(type='password' required='' name='password' minlength='8')
+                        br
+                        span#message2  
+                        br
+                        br
+                        button.form_button(type='Submit' value="Submit") SIGN UP
+                        br
